@@ -29,7 +29,7 @@ def one_run():
     example_environment.render = True
 
     action_step_size = simulation_duration / nb_actuations  # Duration of 1 train episode / actions in 1 episode
-    single_run_duration = 250  # In non-dimensional time
+    single_run_duration = 25  # In non-dimensional time
     action_steps = int(single_run_duration / action_step_size)
 
     internals = agent.initial_internals()
