@@ -37,7 +37,7 @@ for crrt_simu in range(number_servers):
         timing_print=(crrt_simu == 0)     # Only print time info for env_0
     ))
 
-network = [dict(type='retrieve', tensors = ['obs']), dict(type='rnn', size=512, horizon=20,cell='gru')]
+network = [dict(type='retrieve', tensors = ['obs']), dict(type='rnn', size=512, horizon=20,cell='lstm')]
 
 agent = Agent.create(
     # Agent + Environment
