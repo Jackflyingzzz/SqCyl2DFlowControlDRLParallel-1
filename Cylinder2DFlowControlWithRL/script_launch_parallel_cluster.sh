@@ -1,6 +1,6 @@
 #!/bin/bash
 #PBS -l walltime=72:00:00
-#PBS -l select=1:ncpus=64:mem=100gb
+#PBS -l select=1:ncpus=96:mem=100gb
 
 # Cluster Environment Setup
 cd $PBS_O_WORKDIR
