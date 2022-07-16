@@ -84,7 +84,7 @@ def resume_env(plot=False,  # To plot results (Field, controls, lift, drag, rec 
                      'include_actions': include_actions
                      }
 
-    optimization_params = {"num_steps_in_pressure_history": 20,  # Number of steps that constitute an environment state (state shape = this * len(locations))
+    optimization_params = {"num_steps_in_pressure_history": 1,  # Number of steps that constitute an environment state (state shape = this * len(locations))
                         "min_value_jet_MFR": -0.1,  # Set min and max Q* for weak actuation
                         "max_value_jet_MFR": 0.1,
                         "smooth_control": 0.1,  # parameter alpha to smooth out control
