@@ -81,7 +81,7 @@ runner = Runner(
 )
 
 runner.run(
-    num_episodes=6000,
+    num_episodes=16000,
     sync_episodes=True,  # Whether to synchronize parallel environment execution on episode-level
 )
 
