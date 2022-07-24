@@ -38,8 +38,8 @@ for crrt_simu in range(number_servers):
     ))
 
 network = [dict(type='retrieve', tensors = ['obs']), 
-           dict(type='rnn', size=512, horizon=50,cell='gru'),
-           dict(type='rnn', size=512, horizon=50,cell='gru'),]
+           dict(type='rnn', size=512, horizon=20,cell='gru'),
+           dict(type='rnn', size=256, horizon=10,cell='gru'),]
 
 agent = Agent.create(
     # Agent + Environment
