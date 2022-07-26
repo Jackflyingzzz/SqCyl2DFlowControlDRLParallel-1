@@ -37,9 +37,9 @@ for crrt_simu in range(number_servers):
         timing_print=(crrt_simu == 0)     # Only print time info for env_0
     ))
 
-network = [dict(type='dense', size=512), 
-           dict(type='rnn', size=512, horizon=25,cell='gru'),
-           dict(type='dense', size=512)]
+network = [dict(type='retrieve', tensors = ['obs']),
+           dict(type='lstm', size=700, horizon=200),
+           dict(type='dense', size=256)]
 
 agent = Agent.create(
     # Agent + Environment
@@ -65,7 +65,7 @@ agent = Agent.create(
         optimizer=dict(type='adam', learning_rate=1e-3)
     ),
     # Regularization
-    entropy_regularization=0.01,  # To discourage policy from being too 'certain'
+    entropy_regularization=0.012,  # To discourage policy from being too 'certain'
     #Exploration
     #exploration=0.01,
     # TensorFlow etc
